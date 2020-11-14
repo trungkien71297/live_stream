@@ -7,7 +7,7 @@ const config = {
   ]
 };
 
-const socket = io.connect("https://51d94632b1f7.ngrok.io");
+const socket = io.connect("https://livetreamthanh.herokuapp.com");
 const video = document.querySelector("video");
 const enableAudioButton = document.querySelector("#enable-audio");
 

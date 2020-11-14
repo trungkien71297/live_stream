@@ -24,7 +24,7 @@ const server = app.listen(3000, () => {
 const io = socketio(server, {
   serveClient: true,
   cors: {
-    origin: "https://51d94632b1f7.ngrok.io",
+    origin: "https://livetreamthanh.herokuapp.com",
     credentials: true
   }
 })
