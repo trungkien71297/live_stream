@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Viewer</title>
+	<meta charset="UTF-8" />
+	<link href="/styles.css" rel="text/css">
+</head>
+
+<body>
+
+	<input type="text" id="roomid" placeholder="Create class">
+  <div>
+      <button type="button" id="watch">watch</button>
+  </div>
+	<video playsinline autoplay muted></video>
+	<button id="enable-audio">Enable audio</button>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.1/socket.io.js"></script>
+	<script src="/watch.js"></script>
+</body>
+
+</html>
