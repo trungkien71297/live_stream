@@ -3,7 +3,8 @@ const socketio = require('socket.io')
 const app = express()
 const path = require('path')
 var cors = require('cors')
-
+var http = require("http").Server(app);
+var io = require("socket.io")(http);
 app.use(cors())
 app.use(express.static('public'));
 app.get('/', (req, res) => {
@@ -18,15 +19,8 @@ app.get('/broadcast', (req, res) => {
 app.get('/4', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'test2.html'))
 })
-const server = app.listen(process.env.PORT||3000, () => {
+http.listen(process.env.PORT||3000, () => {
   console.log("Reader server")
-})
-const io = socketio(server, {
-  serveClient: true,
-  cors: {
-    origin: "https://livetreamthanh.herokuapp.com",
-    credentials: true
-  }
 })
 
 var rooms = new Map()
