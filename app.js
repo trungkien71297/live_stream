@@ -18,7 +18,7 @@ app.get('/broadcast', (req, res) => {
 app.get('/4', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'test2.html'))
 })
-const server = app.listen(3000, () => {
+const server = app.listen(process.env.PORT||3000, () => {
   console.log("Reader server")
 })
 const io = socketio(server, {
