@@ -7,7 +7,7 @@ var cors = require('cors')
 app.use(cors())
 app.use(express.static('public'));
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'test.html'))
+  res.json({"stat": "ok"})
 })
 app.get('/test2', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'test2.html'))
